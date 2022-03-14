@@ -1,4 +1,3 @@
-
 package main
 
 import (
@@ -13,9 +12,9 @@ import (
 
 type User struct {
 	Firstname string `json:"Firstname"`
-	Lastname string `json:"Lastname"`
-	Age int `json:"Age"`
-	Id string `json:"Id"`
+	Lastname  string `json:"Lastname"`
+	Age       int    `json:"Age"`
+	Id        string `json:"Id"`
 }
 
 var Users []User
@@ -71,7 +70,7 @@ func handleRequests() {
 	myRouter.HandleFunc("/user", createNewUser).Methods("POST")
 	myRouter.HandleFunc("/user/{id}", deleteUser).Methods("DELETE")
 	myRouter.HandleFunc("/user/{id}", returnSingleUser)
-	log.Fatal(http.ListenAndServe(":8080", myRouter))
+	log.Fatal(http.ListenAndServe(":8081", myRouter))
 }
 
 func main() {

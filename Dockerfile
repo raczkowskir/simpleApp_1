@@ -30,3 +30,4 @@ EXPOSE 8080
 
 # Run
 CMD [ "/simpleApp_1" ]
+# RAKI
